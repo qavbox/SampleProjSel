@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <Routing name ="routingAppender">
+            <Routes pattern="$${ctx:routingfilename}">
+            <Route>
+        <File name="LogToFile" fileName="logs/${ctx:routingfilename}.log" append="false">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+            </Route>
+            </Routes>
+        </Routing>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.example" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+            <!--AppenderRef ref="LogToFile"/-->
+            <AppenderRef ref="routingAppender"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+            <!--AppenderRef ref="LogToFile"/-->
+            <AppenderRef ref="routingAppender"/>
+
+        </Root>
+    </Loggers>
+</Configuration>
+
+<!-- rules>
+Most logging frameworks have a set of levels similar to
+FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ordered from highest to lowest.
+if root level is info, then we can use fatal, error, warn & info, but not debug & trace
+
+Here is how you can set the log level for a class, package or entire application in log4j 2, using a log4j2.properties file:
+
+loggers=classLogger,packageLogger
+
+logger.classLogger.name=com.stackify.service.MyService
+logger.classLogger.level=info
+
+logger.packageLogger.name=com.stackify.config
+logger.packageLogger.level=debug
+rootLogger.level=debug
+
+
+
+
+%d - date
+p - level
+</rules-->
