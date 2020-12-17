@@ -6,7 +6,7 @@
 
     <test name="Regression" preserve-order="true">
         <!--intentionally commented browser, so we can fetch the value from mvn parameter-->
-        <!--parameter name="browser" value="chrome"/-->
+        <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://www.saucedemo.com/"/>
         <classes>
             <class name="pom.tc.LoginTest"/>
