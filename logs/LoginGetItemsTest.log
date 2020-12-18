@@ -1,0 +1,2 @@
+2020-12-18 11:56:25,068 INFO p.p.HomePage [TestNG-test=Regression-2] Login clicked - from log
+2020-12-18 11:56:27,082 INFO p.p.ProductsPage [TestNG-test=Regression-2] returning product size from log4j
