@@ -8,7 +8,7 @@ stages
 {
 	stage('checkout')
 	{
-        echo "checkouting"
+        git credentialsId: 'b97cc42b-5f7f-4bff-97e2-715c8c351f2c', url: 'https://github.com/qavbox/SampleProjSel.git'
 	}
 	stage('Test')
 	{
