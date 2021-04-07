@@ -1,0 +1,29 @@
+pipeline {
+	agent any
+tools
+{
+	maven 'maven_home'
+}
+stages
+{
+	stage('checkout')
+	{
+
+	}
+	stage('Test')
+	{
+		steps
+		{
+			echo "Test"
+			sh 'mvn test'
+		}
+	}
+	stage('Deploy')
+	{
+		steps
+		{
+		    echo "Deploy"
+		}
+ 	}
+}
+}

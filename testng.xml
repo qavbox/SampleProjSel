@@ -3,7 +3,6 @@
 <listeners>
     <listener class-name="base.TestListeners"/>
 </listeners>
-
     <test name="Regression" preserve-order="true">
         <!--intentionally commented browser, so we can fetch the value from mvn parameter-->
         <parameter name="browser" value="chrome"/>

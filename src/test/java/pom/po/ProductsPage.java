@@ -12,7 +12,7 @@ public class ProductsPage {
 
     private static final Logger logger = LogManager.getLogger(ProductsPage.class);
 
-    PageEl product =  new PageEl(By.className("product_label"));
+    PageEl product =  new PageEl(By.className("title"));
 
     PageEl items =  new PageEl(By.className("inventory_item_name"));
 

@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <sel.version>4.0.0-alpha-6</sel.version>
+        <sel.version>4.0.0-beta-2</sel.version>
         <testng.version>7.1.0</testng.version>
         <!--suppress UnresolvedMavenProperty -->
         <testngpath>${testngPath}</testngpath>
