@@ -27,7 +27,7 @@ public class LoginGetItemsTest extends BaseTest {
 
         Thread.sleep(2000);
 
-        Assert.assertEquals(prodPage.getItemsSize(), 5);
+        Assert.assertEquals(prodPage.getItemsSize(), 6);
 
         System.out.println("prod count 6");
 
