@@ -31,7 +31,7 @@ stages
     	steps
     	{
     		echo "artifact"
-    		sh archiveArtifacts artifacts: 'ExtentTestReport/*.html','target/surefire-reports/emailable-report.html'
+    		archiveArtifacts artifacts: 'ExtentTestReport/*.html','target/surefire-reports/emailable-report.html'
     	}
     }
 	stage('Deploy')
