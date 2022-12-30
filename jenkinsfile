@@ -24,7 +24,7 @@ stages
 		{
 		    catchError {
                 echo "Test"
-                sh 'mvn test'
+                sh 'mvn test -Dbrowser=${params.browser}'
             }
             echo currentBuild.result
 		}
