@@ -15,7 +15,7 @@ stages
 		steps{
 		    echo "checkingout"
 		    echo "${params.browser}"
-            git credentialsId: '${{secrets.gitcredid}}', url: 'https://github.com/qavbox/SampleProjSel.git'
+            git credentialsId: '140b9004-3666-4252-a40e-f876c2bad208', url: 'https://github.com/qavbox/SampleProjSel.git'
 		}
 	}
 	stage('Test')
