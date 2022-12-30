@@ -42,7 +42,7 @@ post{
         echo "artifact"
         archiveArtifacts artifacts: 'ExtentTestReport/*.html'
         archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
-        junit testResults: 'target/surefire-reports/testng-results.xml', skipPublishingChecks: true
+        junit testResults: 'target/surefire-reports/*.xml', skipPublishingChecks: true
     }
 }
 }
