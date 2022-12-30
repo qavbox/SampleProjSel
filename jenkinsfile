@@ -26,15 +26,6 @@ stages
 			sh 'mvn test'
 		}
 	}
-	stage('artifact')
-    {
-    	steps
-    	{
-    		echo "artifact"
-    		archiveArtifacts artifacts: 'ExtentTestReport/*.html'
-    		archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
-    	}
-    }
 	stage('Deploy')
 	{
 		steps
@@ -42,5 +33,12 @@ stages
 		    echo "Deploy"
 		}
  	}
+}
+post{
+    always{
+        echo "artifact"
+        archiveArtifacts artifacts: 'ExtentTestReport/*.html'
+        archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
+    }
 }
 }
