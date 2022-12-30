@@ -26,6 +26,14 @@ stages
 			sh 'mvn test'
 		}
 	}
+	stage('artifact')
+    {
+    	steps
+    	{
+    		echo "artifact"
+    		sh archiveArtifacts artifacts: 'ExtentTestReport/*.html','target/surefire-reports/emailable-report.html'
+    	}
+    }
 	stage('Deploy')
 	{
 		steps
